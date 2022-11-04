@@ -1,11 +1,20 @@
+import React from "react";
+import Repos from "./components/repos";
+import { Route, Routes } from "react-router-dom";
+import ContextProvider from "./components/context";
+import MoreInfo from "./components/info";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-      </header>
-    </div>
+
+    <ContextProvider>
+      {/* <MoreInfo /> */}
+      <Routes>
+        <Route path="/" element={< Repos />} >
+          <Route path=":id" element={< MoreInfo />} />
+        </Route>
+      </Routes>
+    </ContextProvider>
   );
 }
 
