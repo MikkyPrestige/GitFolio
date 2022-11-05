@@ -1,20 +1,24 @@
 import React from "react";
-import Repos from "./components/repos";
+import { ErrorBoundary } from "react-error-boundary";
 import { Route, Routes } from "react-router-dom";
-import ContextProvider from "./components/context";
-import MoreInfo from "./components/info";
+import { Layout, Home, ContextProvider, Repos, MoreInfo, Error, FallbackError } from "./components";
 
 const App = () => {
   return (
-
-    <ContextProvider>
-      {/* <MoreInfo /> */}
-      <Routes>
-        <Route path="/" element={< Repos />} >
-          <Route path=":id" element={< MoreInfo />} />
-        </Route>
-      </Routes>
-    </ContextProvider>
+    <ErrorBoundary FallbackComponent={FallbackError}>
+      <Layout />
+      <ContextProvider>
+        {/* <MoreInfo /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/repos">
+            <Route index element={<Repos />} />
+            <Route path=":repo" element={<MoreInfo />} />
+          </Route>
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </ContextProvider>
+    </ErrorBoundary>
   );
 }
 

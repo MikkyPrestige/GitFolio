@@ -28,12 +28,6 @@ const ContextProvider = (props) => {
         setError(error);
         setLoading(false);
       });
-    // console.log(data);
-    //         // console.log(data[0].name);
-    //         // console.log(data[0].description);
-    //         // console.log(data[0].language);
-    //         // console.log(data[0].updated_at);
-    //         // console.log(data[0].html_url);
   }, [page]);
 
   if (loading) return <p>Loading...</p>;
