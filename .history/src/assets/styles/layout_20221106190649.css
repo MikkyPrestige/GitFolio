@@ -1,0 +1,15 @@
+.layout {
+  background-color: #fffff2;
+  padding: 1rem 3rem;
+}
+
+.layout--items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.layout--item {
+
+}

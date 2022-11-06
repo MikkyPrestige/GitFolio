@@ -8,7 +8,6 @@ const App = () => {
     <ErrorBoundary FallbackComponent={FallbackError}>
       <Layout />
       <ContextProvider>
-        {/* <MoreInfo /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/repos">

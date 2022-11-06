@@ -1,0 +1,16 @@
+.layout {
+  background-color: #fffff2;
+  padding: 1rem;
+}
+
+.layout--items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-left: 10rem;
+}
+
+.layout--item {
+
+}

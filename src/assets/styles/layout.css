@@ -1,0 +1,17 @@
+.layout {
+  background-color: #fffff2;
+  padding: 1rem 10rem;
+}
+
+.layout--items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+
+.layout--item {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+}

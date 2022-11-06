@@ -1,0 +1,23 @@
+.layout {
+  background-color: #fffff2;
+  padding: 1rem;
+}
+
+.layout--items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-left: 10rem;
+}
+
+.layout--item {
+  width: 20rem;
+  height: 20rem;
+  background-color: #e0e3d;
+  5rempadding: 1rem;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
