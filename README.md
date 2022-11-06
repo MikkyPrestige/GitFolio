@@ -3,8 +3,8 @@
 #### ====== PROJECT TITLE:  ========================
  * Github Portfolio API fetch
  
- # LIVE LINK
- https://github-repos-display.vercel.app/
+ # Project Live url
+* [github repos display](https://github-repos-display.vercel.app/)
  
  
 #### ====== PROJECT CODE LANGUAGE: ==================
