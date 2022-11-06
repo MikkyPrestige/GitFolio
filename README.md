@@ -4,8 +4,7 @@
  * Github Portfolio API fetch
  
  # Project Live url
-* [github-repos-displayApp](https://github-repos-display.vercel.app/)
- 
+* [github-repos-displayApp](https://github-repos-display.vercel.app/) (https://github-repos-display.vercel.app/)
  
 #### ====== PROJECT CODE LANGUAGE: ==================
  * React
