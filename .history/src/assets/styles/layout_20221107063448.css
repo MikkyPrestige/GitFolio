@@ -1,0 +1,22 @@
+.layout {
+  background-color: #fffff2;
+  padding: .5rem 3rem;
+}
+
+.layout--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout--items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.layout--item {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+}

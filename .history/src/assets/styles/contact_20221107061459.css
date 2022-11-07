@@ -1,0 +1,25 @@
+.contact {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact--heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact--links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact--link {
+    color: #55b2f9;
+}
+.contact--link:visited {
+    /* color: #55b2f9; */
+}
