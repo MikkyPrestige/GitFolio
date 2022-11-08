@@ -6,4 +6,4 @@ export { default as MoreInfo } from "./moreInfo";
 export { default as Contact } from "./contact";
 export { default as Error } from "./404";
 export { default as FallbackError } from "./fallbackError";
-export { default as Test } from "./test";
+export { }
