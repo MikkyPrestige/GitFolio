@@ -1,0 +1,30 @@
+.error {
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.error--heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.error--link {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0046dc;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error--link:hover {
+  background-color: #7dd5c6;
+}
+
+.error--link:active {
+  background-color: #0046dc;
+}

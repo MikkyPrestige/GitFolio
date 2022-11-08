@@ -1,0 +1,50 @@
+.layout {
+  background-color: #fffff2;
+  padding: .3rem 3rem;
+}
+
+.layout--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout--items {
+position: relative;
+}
+
+.layout--btn {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menuNav {
+  /* overflow-y: scroll; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  max-width: 15rem;
+  height: 100%;
+  background-color: #fffff2;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  /* transition: all .3s ease-in-out; */
+}
+
+.layout--item {
+  display: block;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: 'Anton';
+  letter-spacing: .3rem;
+  color: #0046dc
+}

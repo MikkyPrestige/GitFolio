@@ -1,0 +1,43 @@
+.contact {
+    padding: 5rem;
+    /* margin: 2rem; */
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.contact--heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact--links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #55b2f9;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.contact--links:hover {
+    color: #bbe0ff;
+}
+
+.contact--link {
+    color: #55b2f9;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.contact--link:hover {
+    color: #bbe0ff;
+    letter-spacing: 2px;
+}

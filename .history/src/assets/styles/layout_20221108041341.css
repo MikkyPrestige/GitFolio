@@ -1,0 +1,35 @@
+.layout {
+  background-color: #fffff2;
+  padding: .3rem 3rem;
+}
+
+.layout--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout--items {
+  /* display: flex;
+  gap: 2rem; */
+position: relative;
+}
+
+.layout--btn {
+  background-color: #55b2f9;
+  color: #fffff2;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.layout--item {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: 'Anton';
+  letter-spacing: .3rem;
+  color: #0046dc
+}
