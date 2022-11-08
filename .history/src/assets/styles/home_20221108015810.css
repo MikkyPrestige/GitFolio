@@ -1,0 +1,64 @@
+.home {
+  margin: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+.home--heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  animation: slide 6s ease-in-out 3s infinite normal none;
+  -webkit-animation: slide 6s ease-in-out 3s infinite normal none;
+}
+
+.home--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home--paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.footer {
+  padding: 1rem;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #fff2f2;
+}
+
+ /* HEADING ANIMATION */
+ @keyframes slide{
+  0% {
+  }
+  2% {
+      transform:  skew(-6deg, -6deg) rotate(6deg);
+  }
+  28% {
+      transform:  translate(50px, 0) skew(-6deg, -6deg) rotate(6deg);
+  }
+  29% {
+      transform:  rotate(-6deg) skew(6deg, 6deg) translate(30px, 0);
+  }
+  70% {
+      transform:  translate(-40px, 0) rotate(-6deg) skew(6deg, 6deg);
+  }
+  71% {
+      transform:  rotate(6deg) skew(-6deg, -6deg) translate(-20px, 0);
+  }
+  96% {
+      transform:  skew(-6deg, -6deg) rotate(6deg) translate(0,0);
+  }
+  100% {
+  }
+}

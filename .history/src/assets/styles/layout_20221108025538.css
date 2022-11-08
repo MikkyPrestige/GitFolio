@@ -1,0 +1,25 @@
+.layout {
+  background-color: #fffff2;
+  padding: .3rem 3rem;
+}
+
+.layout--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout--items {
+  display: flex;
+  gap: 5rem;
+  margin-right: 2em;
+}
+
+.layout--item {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: 'Anton';
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8EC0E4;
+}
