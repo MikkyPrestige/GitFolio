@@ -13,7 +13,7 @@ const Contact = () => {
       </Helmet>
       <h1 className="contact--heading">Reach me on any of these...</h1>
       <div className="contact--links">
-        <p  className="contact--link">08030849685</p>
+        <p>08030849685</p>
         <p className="contact--link">
           <a
             href="mailto: meekyberry6@gmail.com"

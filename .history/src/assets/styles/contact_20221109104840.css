@@ -31,10 +31,6 @@
     text-decoration: none;
 }
 
-.contact--link a:hover {
-    color: #bbe0ff;
-}
-
 .contact--link:hover {
     color: #bbe0ff;
     letter-spacing: 2px;

@@ -15,24 +15,23 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
-    border-bottom: 1px solid #ccc;
+    color: green;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid red;
+}
+
+.contact--links:hover {
+    color: #bbe0ff;
 }
 
 .contact--link {
-    color: #19f349;
-    font-size: 1.2rem;
+    color: #7dd5c6;
+    font-size: 1.5rem;
     font-weight: 700;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-}
-
-.contact--link a {
-    color: #19f349;
     text-decoration: none;
-}
-
-.contact--link a:hover {
-    color: #bbe0ff;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .contact--link:hover {

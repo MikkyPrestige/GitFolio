@@ -15,24 +15,19 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
-    border-bottom: 1px solid #ccc;
+    color: #19f349;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid red;
 }
 
 .contact--link {
     color: #19f349;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    text-decoration: none;
     transition: all .5s ease-in-out;
     cursor: pointer;
-}
-
-.contact--link a {
-    color: #19f349;
-    text-decoration: none;
-}
-
-.contact--link a:hover {
-    color: #bbe0ff;
 }
 
 .contact--link:hover {
