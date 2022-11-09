@@ -46,7 +46,7 @@ const MoreInfo = () => {
         </p>
         <p className="info--item">
           <strong>Description: </strong>
-          { description }
+          {description}
         </p>
         <p className="info--item">
           <strong>Topics: </strong>

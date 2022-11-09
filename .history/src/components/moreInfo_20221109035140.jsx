@@ -10,26 +10,15 @@ const MoreInfo = () => {
   const { portfolio } = useContext(Context); //  get portfolio data from the useContext hook in the contextProvider component
   const { repo } = useParams();
   const repoData = portfolio.find((item) => item.name === repo); // find the repo data from the portfolio data
-  const {
-    name,
-    description,
-    html_url,
-    homepage,
-    language,
-    created_at,
-    updated_at,
-    pushed_at,
-    full_name,
-    topics,
-    size,
-    open_issues,
-    visibility,
-    login,
-    default_branch,
-  } = repoData || {};
+  // console.log(repo);
+  // console.log(repoData)
+// localStorage.setItem("repos", JSON.stringify(portfolio))
+  // Json.parse(localStorage.getItem("repos"))
+  const { name, description, html_url, homepage, language, created_at, updated_at, pushed_at, full_name, topics, size, open_issues, visibility, owner, default_branch } = repoData || {};
 
   return (
     <div className="info">
+      {/* Json.parse(localStorage.getItem("repos")) */}
       <Helmet>
         <title>Data</title>
         <meta name="description" content="Extra Repository data" />
@@ -38,11 +27,11 @@ const MoreInfo = () => {
       <div className="info--data">
         <p className="info--item">
           <strong>Name: </strong>
-          {name}
+          { name }
         </p>
         <p className="info--item">
           <strong>Full-Name: </strong>
-          {full_name}
+          { full_name }
         </p>
         <p className="info--item">
           <strong>Description: </strong>
@@ -50,51 +39,51 @@ const MoreInfo = () => {
         </p>
         <p className="info--item">
           <strong>Topics: </strong>
-          {topics}
+          { topics }
         </p>
         <p className="info--item">
           <strong>Date Created: </strong>
-          {created_at}
+          { created_at }
         </p>
         <p className="info--item">
           <strong>Last updated: </strong>
-          {updated_at}
+          { updated_at }
         </p>
         <p className="info--item">
           <strong>Pushed At: </strong>
-          {pushed_at}
+          { pushed_at }
         </p>
         <p className="info--item">
           <strong>Language: </strong>
-          {language}
+          { language }
         </p>
         <p className="info--item">
           <strong>Owner: </strong>
-          {login}
+          { owner.login }
         </p>
         <p className="info--item">
           <strong>Visibility: </strong>
-          {visibility}
+          { visibility }
         </p>
         <p className="info--item">
           <strong>Open Issues: </strong>
-          {open_issues}
+          { open_issues }
         </p>
         <p className="info--item">
           <strong>Default Branch: </strong>
-          {default_branch}
+          { default_branch }
         </p>
         <p className="info--item">
           <strong>Size: </strong>
-          {size}
+          { size }
         </p>
         <p className="info--item">
           <strong>Homepage: </strong>
-          {homepage}
+          { homepage }
         </p>
       </div>
       <a
-        href={html_url}
+        href={ html_url }
         target="_blank"
         rel="noreferrer"
         className="info--link"
