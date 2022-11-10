@@ -13,10 +13,11 @@ const Contact = () => {
       </Helmet>
       <h1 className="contact--heading">Reach me on any of these...</h1>
       <div className="contact--links">
-        <p className="contact--link">08030849685</p>
+        <p  className="contact--link">08030849685</p>
         <p className="contact--link">
           <a
             href="mailto: meekyberry6@gmail.com"
+
             target="_blank"
             rel="noreferrer"
           >
@@ -35,6 +36,7 @@ const Contact = () => {
         <p className="contact--link">
           <a
             href="https://www.linkedin.com/in/mikkylanky/"
+
             target="_blank"
             rel="noreferrer"
           >
@@ -50,9 +52,10 @@ const Contact = () => {
             Replit
           </a>
         </p>
-        <p className="contact--link">
+        <p  className="contact--link">
           <a
             href="https://leetcode.com/meekyberry/"
+
             target="_blank"
             rel="noreferrer"
           >
@@ -64,11 +67,11 @@ const Contact = () => {
         <div className="desc">
           <h3 className="desc--heading">App Description:</h3>
           <p>
-            This is a React app that uses Github API to fetch and display a list
-            of my github repositories and some extra data about each repository
-            when "View Repo data" button is clicked in the Repository list. It
-            also displays my name, followers and following count, location,
-            current local time and bio etc. from my github portfolio.
+           This is a React app that uses Github API to fetch and display a
+                list of my github repositories and some extra data about each
+                repository when "View Repo data" button is clicked in the Repository list. It also
+                displays my name, followers and following count, location,
+                current local time and bio etc. from my github portfolio.
           </p>
           <p>
             Data is passed between components with React useContext and React

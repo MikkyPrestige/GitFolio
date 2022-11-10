@@ -5,43 +5,19 @@ import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
-    <div role="alert" style={{ textAlign: "center", marginTop: "5rem" }}>
-      <p style={{ fontSize: "1.5rem" }}>Somethings don't push it lol😁</p>
-      <pre
-        style={{
-          fontStyle: "italic",
-          fontSize: "1.8rem",
-          fontWeight: "700",
-          color: "red",
-        }}
-      >
-        {error.message}
-      </pre>
-      <button
-        onClick={resetErrorBoundary}
-        style={{
-          padding: ".5rem",
-          fontSize: "1rem",
-          fontWeight: "700",
-          color: "#0046dc",
-          borderRadius: ".5rem",
-        }}
-      >
-        Try again
-      </button>
+    <div role="alert" className="text--container">
+      <p className="text--title">Something went wrong:</p>
+      <pre className="text--msg">{error.message}</pre>
+      <button onClick={resetErrorBoundary} className="text--btn">Try again</button>
     </div>
   );
 };
 
 const Bomb = ({ username }) => {
   if (username === "Abiola") {
-    throw new Error("💣 CABOOM CABOOR CABARR 💣");
+    throw new Error("💣 CABOOM 💣");
   }
-  return (
-    <div style={{ height: "100vh" }}>
-      <h1 style={{ color: "#bbe0ff" }}>Hello {username}🙌🏾 my Gee!!!</h1>
-    </div>
-  );
+  return <h1>I salute Gee! {username}🙌🏾</h1>;
 };
 
 const ErrorBoundaryTest = () => {
@@ -49,20 +25,14 @@ const ErrorBoundaryTest = () => {
   const usernameRef = useRef(null);
 
   return (
-    <div style={{ margin: "5rem", height: "100vh" }}>
-      <label style={{ fontSize: "1.5rem" }}>
+    <div style={{margin: "5rem", height: "100%"}}>
+      <label style={{fontSize: "1.5rem"}}>
         {`Enter your username (Don't type "Abiola"): `}
         <input
           ref={usernameRef}
           value={username}
           onChange={() => setUsername(usernameRef.current.value)}
-          style={{
-            border: "none",
-            borderRadius: ".5rem",
-            width: "10rem",
-            padding: ".5rem",
-          }}
-        />
+          style={{border: "none", padding: ".5rem"}} />
       </label>
       <ErrorBoundary
         FallbackComponent={ErrorFallback}

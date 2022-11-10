@@ -39,11 +39,11 @@
 
 .menuNav.showMenu {
   width: 100%;
-  transition: all 2s ease-in;
-  -webkit-transition: all 2s ease-in;
-  -moz-transition: all 2s ease-in;
-  -ms-transition: all 2s ease-in;
-  -o-transition: all 2s ease-in;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -o-transition: all 2s linear;
 }
 
 .layout--item {
