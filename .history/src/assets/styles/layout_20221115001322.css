@@ -1,0 +1,98 @@
+.layout {
+  background-color: #fffff2;
+  padding: .3rem 3rem;
+}
+
+.layout--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout--items {
+  position: relative;
+}
+
+.layout--btn {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  background-color: #fffff2;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menuNav {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  width: 0;
+  max-width: 15rem;
+  height: 100%;
+  background-color: #fffff2;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+}
+
+.layout--item {
+  display: block;
+  margin-top: .8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Blinker';
+  letter-spacing: .2rem;
+  color: #0046dc;
+}
+
+.layout--item:hover {
+  color: #7dd5c6;
+}
+
+.layout--items--container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.layout--item__two {
+  /* text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: 'Blinker';
+  letter-spacing: .2rem;
+  margin-left: 2rem;
+  color: #0046dc; */
+}
+
+  /* MEDIA QUERY TO HIDE THE NAVIGATION BAR HAMBURGER ON LARGE SCREENS */
+@media screen and (min-width: 768px) {
+  .layoutOne {
+    display: none;
+  }
+
+  .layoutTwo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutOne {
+    display: block;
+  }
+
+  .layoutTwo {
+    display: none;
+  }
+}
