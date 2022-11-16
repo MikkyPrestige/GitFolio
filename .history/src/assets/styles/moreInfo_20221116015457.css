@@ -18,7 +18,7 @@
 .info--data {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  gap: 1rem;
   width: 100%;
   max-width: 850px;
 }
@@ -42,12 +42,8 @@
   border: 1px solid #ccc;
   border-radius: .5rem;
   text-decoration: none;
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
   cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
 }
 
 .info--link:hover {
@@ -79,15 +75,4 @@
 .info--back:hover {
   background-color: #00bb14;
   color: #f5f5f5;
-}
-
-@media screen and (max-width: 768px) {
-  .info--data {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .info--item {
-    border-bottom: none;
-  }
 }

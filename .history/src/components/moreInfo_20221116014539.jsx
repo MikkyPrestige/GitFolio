@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 import { Context } from "./context";
 import { Helmet } from "react-helmet";
 import "../assets/styles/moreInfo.css";
+import { Back } from "../components";
 
 const MoreInfo = () => {
   const { portfolio } = useContext(Context); //  get portfolio data from the useContext hook in the contextProvider component
@@ -104,6 +105,7 @@ const MoreInfo = () => {
       <Link to="/repos" className="info--back">
         Back to repo lists &#8592;
       </Link>
+      {/* <Back /> */}
     </div>
   );
 };

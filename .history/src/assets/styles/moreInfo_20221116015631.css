@@ -80,14 +80,3 @@
   background-color: #00bb14;
   color: #f5f5f5;
 }
-
-@media screen and (max-width: 768px) {
-  .info--data {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .info--item {
-    border-bottom: none;
-  }
-}

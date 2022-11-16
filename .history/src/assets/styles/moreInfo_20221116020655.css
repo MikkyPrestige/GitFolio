@@ -84,10 +84,10 @@
 @media screen and (max-width: 768px) {
   .info--data {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0rem;
   }
 
   .info--item {
-    border-bottom: none;
+    margin-bottom: 0rem;
   }
 }

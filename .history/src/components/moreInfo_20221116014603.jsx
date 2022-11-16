@@ -104,6 +104,7 @@ const MoreInfo = () => {
       <Link to="/repos" className="info--back">
         Back to repo lists &#8592;
       </Link>
+      {/* <Back /> */}
     </div>
   );
 };
