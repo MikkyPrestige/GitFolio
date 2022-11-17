@@ -38,10 +38,6 @@
     letter-spacing: 2px;
 }
 
-.contact--link a:visited {
-    color: red;
-}
-
 .desc {
     margin-bottom: 1rem;
 }
