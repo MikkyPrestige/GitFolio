@@ -152,6 +152,11 @@ strong {
     margin-bottom: .5rem;
   }
 
+  .home--wrapper {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
   .home--info {
     flex-direction: column;
     gap: .5rem;
@@ -163,7 +168,6 @@ strong {
 
  .home--paragraph__text {
     font-size: .9rem;
-    margin-top: .5rem ;
  }
 
   .home--btn {

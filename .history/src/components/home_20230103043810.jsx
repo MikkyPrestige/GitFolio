@@ -51,7 +51,7 @@ const Home = () => {
           Click here to search for more Github repositories
         </Link>
       </div>
-      {/* <div className="home--container__time">
+      <div className="home--container__time">
         <span>
           <strong>Date: </strong>
           {new Date().toLocaleDateString()}
@@ -60,7 +60,7 @@ const Home = () => {
           <strong>Time: </strong>
           {new Date().toLocaleTimeString()}
         </span>
-      </div> */}
+      </div>
       <div className="home--container">
         <h1 className="home--heading">Github repository display app!!!</h1>
         <div className="home--paragraph">
@@ -71,7 +71,7 @@ const Home = () => {
             </p>
           </div>
           <div className="home--wrapper">
-            <h1 className="home--info__heading">{name} github portfolio</h1>
+            <h1 className="home--info__heading">Hi, I'm {name}.</h1>
             <div className="home--info">
               <div className="home--img">
                 <img

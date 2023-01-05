@@ -1,6 +1,6 @@
 .home {
   height: 100%;
-  margin: 1rem;
+  margin: 1rem 3rem;
   font-family: 'Blinker';
   font-size: 1rem;
   text-align: center;
@@ -33,36 +33,41 @@
 
 .home--container__topLink:hover {
   text-decoration: underline;
+  /* -webkit-animation: pulse .5s ease-in-out infinite; */
 }
 
-/* .home--container__time {
+.home--container__time {
   font-size: 1rem;
   font-weight: 600;
   color: #FFEA11;
+  width: 75%;
   display: flex;
   justify-content: space-between;
-  gap: 45rem;
-  white-space: nowrap;
-} */
+}
 
 .home--container {
   border: 1px solid #ccc;
   border-radius: 1rem;
-  padding: 0 1rem;
-  /* background-color: #0046dc; */
+  padding: 1rem;
+
 }
 
 .home--heading {
   font-family: 'Anton';
-  font-size: 1.8rem;
-  letter-spacing: .1rem;
+  font-size: 2rem;
+  letter-spacing: .2rem;
   text-transform: capitalize;
-  animation: slide 10s ease-in-out 5s infinite normal none;
-  -webkit-animation: slide 10s ease-in-out s infinite normal none;
+  animation: slide 6s ease-in-out 3s infinite normal none;
+  -webkit-animation: slide 6s ease-in-out 3s infinite normal none;
 }
 
 .home--paragraph {
   margin-top: -1rem;
+}
+
+.home--paragraph__text {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .home--wrapper {
@@ -75,16 +80,16 @@
 
 .home--info__heading {
   color: #FFEA11;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: capitalize;
-  text-decoration: underline;
 }
 
 .home--info {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .home--container__bottom {
@@ -101,7 +106,7 @@
 }
 
 strong {
-  color: #FFEA11;
+  color: #ccc;
 }
 
 .bio--span {
@@ -111,18 +116,18 @@ strong {
 
 .home--btn {
   background-color: #0046dc;
-  color: #FFEA11 ;
+  color: #fffff2;
   border: none;
   border-radius: .5rem;
   padding: .5rem 1rem;
   font-size: 1rem;
+  font-weight: 700;
   margin: 1rem;
   cursor: pointer;
 }
 
 .home--btn:hover {
   background-color: #7dd5c6;
-  color: #fffff2;
 }
 
 .home--btn:active {
@@ -154,20 +159,7 @@ strong {
 
   .home--info {
     flex-direction: column;
-    gap: .5rem;
-  }
-
-  .home--info__heading {
-    font-size: 1rem;
-  }
-
- .home--paragraph__text {
-    font-size: .9rem;
-    margin-top: .5rem ;
- }
-
-  .home--btn {
-    margin-top: -1rem;
+    gap: 1rem;
   }
 }
 

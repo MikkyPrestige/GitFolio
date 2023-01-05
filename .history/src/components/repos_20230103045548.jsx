@@ -25,7 +25,7 @@ const Repos = () => {
                 <li key={repo.id} className="repos--list">
                   <h2 className="repos--list__item">{repo.name}</h2>
                   <NavLink to={`/repos/${repo.name}`} className="repos--btn">
-                    View Repository Data
+                    View Repo Data
                   </NavLink>
                 </li>
               );

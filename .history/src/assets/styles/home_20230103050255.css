@@ -1,6 +1,6 @@
 .home {
   height: 100%;
-  margin: 1rem;
+  margin: 1rem 3rem;
   font-family: 'Blinker';
   font-size: 1rem;
   text-align: center;
@@ -16,6 +16,7 @@
   background-color: #0046dc;
   padding: .5rem;
   border-radius: 1rem 1rem 0 0;
+  margin-bottom: -1.5rem;
 }
 
 .home--container__top:hover {
@@ -35,34 +36,37 @@
   text-decoration: underline;
 }
 
-/* .home--container__time {
+.home--container__time {
   font-size: 1rem;
   font-weight: 600;
   color: #FFEA11;
+  width: 55rem;
   display: flex;
   justify-content: space-between;
-  gap: 45rem;
-  white-space: nowrap;
-} */
+}
 
 .home--container {
   border: 1px solid #ccc;
   border-radius: 1rem;
   padding: 0 1rem;
-  /* background-color: #0046dc; */
 }
 
 .home--heading {
   font-family: 'Anton';
-  font-size: 1.8rem;
-  letter-spacing: .1rem;
+  font-size: 2rem;
+  letter-spacing: .2rem;
   text-transform: capitalize;
-  animation: slide 10s ease-in-out 5s infinite normal none;
-  -webkit-animation: slide 10s ease-in-out s infinite normal none;
+  animation: slide 6s ease-in-out 3s infinite normal none;
+  -webkit-animation: slide 6s ease-in-out 3s infinite normal none;
 }
 
 .home--paragraph {
   margin-top: -1rem;
+}
+
+.home--paragraph__text {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .home--wrapper {
@@ -75,7 +79,7 @@
 
 .home--info__heading {
   color: #FFEA11;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: capitalize;
   text-decoration: underline;
@@ -85,6 +89,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .home--container__bottom {
@@ -116,6 +121,7 @@ strong {
   border-radius: .5rem;
   padding: .5rem 1rem;
   font-size: 1rem;
+  font-weight: 700;
   margin: 1rem;
   cursor: pointer;
 }
@@ -136,6 +142,10 @@ strong {
 }
 
 @media screen and (max-width: 1000px) {
+  .home--container__time {
+    width: 50rem;
+  }
+
   .home--heading {
     font-size: 1.5rem;
   }
@@ -154,20 +164,7 @@ strong {
 
   .home--info {
     flex-direction: column;
-    gap: .5rem;
-  }
-
-  .home--info__heading {
-    font-size: 1rem;
-  }
-
- .home--paragraph__text {
-    font-size: .9rem;
-    margin-top: .5rem ;
- }
-
-  .home--btn {
-    margin-top: -1rem;
+    gap: 1rem;
   }
 }
 

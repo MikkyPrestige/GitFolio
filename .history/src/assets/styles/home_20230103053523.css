@@ -154,7 +154,7 @@ strong {
 
   .home--info {
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
   }
 
   .home--info__heading {
@@ -163,7 +163,6 @@ strong {
 
  .home--paragraph__text {
     font-size: .9rem;
-    margin-top: .5rem ;
  }
 
   .home--btn {

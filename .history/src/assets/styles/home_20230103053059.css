@@ -154,17 +154,13 @@ strong {
 
   .home--info {
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
   }
 
   .home--info__heading {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
-
- .home--paragraph__text {
-    font-size: .9rem;
-    margin-top: .5rem ;
- }
 
   .home--btn {
     margin-top: -1rem;

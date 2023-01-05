@@ -48,10 +48,10 @@ const Home = () => {
       </Helmet>
       <div className="home--container__top">
         <Link to="searchUser" className="home--container__topLink">
-          Click here to search for more Github repositories
+          Click me to search for more Github repositories
         </Link>
       </div>
-      {/* <div className="home--container__time">
+      <div className="home--container__time">
         <span>
           <strong>Date: </strong>
           {new Date().toLocaleDateString()}
@@ -60,7 +60,7 @@ const Home = () => {
           <strong>Time: </strong>
           {new Date().toLocaleTimeString()}
         </span>
-      </div> */}
+      </div>
       <div className="home--container">
         <h1 className="home--heading">Github repository display app!!!</h1>
         <div className="home--paragraph">
@@ -71,13 +71,13 @@ const Home = () => {
             </p>
           </div>
           <div className="home--wrapper">
-            <h1 className="home--info__heading">{name} github portfolio</h1>
+            <h1 className="home--info__heading">Hi, I'm {name}.</h1>
             <div className="home--info">
               <div className="home--img">
                 <img
                   src={avatar_url}
                   alt="My img"
-                  style={{ borderRadius: "50%", width: "60%", height: "60%" }}
+                  style={{ borderRadius: "50%", width: "55%", height: "55%" }}
                 />
               </div>
               <div className="home--container__bottom">
