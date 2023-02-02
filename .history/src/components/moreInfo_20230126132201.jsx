@@ -1,6 +1,6 @@
 // MOREINFO COMPONENT - This component displays more data on each repositories when 'View repo data' link is clicked in the repo component.
 
-import { Link, useParams } from "react-router-dom";
+import { awLink, useParams } from "react-router-dom";
 import React, { useContext } from "react";
 import { Context } from "./context";
 import { Helmet } from "react-helmet";
@@ -8,7 +8,7 @@ import "../assets/styles/moreInfo.css";
 
 const MoreInfo = () => {
   const { repository } = useContext(Context); //  get portfolio data from the useContext hook in the contextProvider component
-  const { repo } = useParams(); // get the repo name from the url
+  const { repo } = useParams();  // get the repo name from the url
   const repoData = repository.find((item) => item.name === repo); // find the repo data from the portfolio data
   const {
     name,

@@ -1,8 +1,8 @@
 // GITHUB PORTFOLIO COMPONENT -  This component is used to fetch my github portfolio from the API and show a list of the github repositories in a page
 
 import { useContext } from "react";
-import { Context } from "./context";
 import { NavLink, Outlet } from "react-router-dom";
+import { Context } from "./context";
 import "../assets/styles/repos.css";
 import { Helmet } from "react-helmet";
 import { Back } from "../components";

@@ -35,6 +35,8 @@ const UserRepo = () => {
   const indexOfFirstUser = indexOfLastUser - reposPerPage;
   const currentUsers = user.slice(indexOfFirstUser, indexOfLastUser);
 
+  // localStorage.setItem('gitHub', JSON.stringify(currentUsers));
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const prevPage = () => {
@@ -48,6 +50,16 @@ const UserRepo = () => {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  // GET STORAGE
+  // const getStorage = () => {
+  //   const storage = localStorage.getItem('gitHub');
+  //   if (storage) {
+  //     setUser(JSON.parse(storage));
+  //   }
+  // };
+  // const storage = localStorage.getItem("gitHub");
+  // setUser(storage)
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>No repos Found</p>;

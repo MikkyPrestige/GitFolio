@@ -8,8 +8,8 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [display, setDisplay] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,9 +26,8 @@ const Home = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error</p>
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>No repos Found</p>;
 
   const {
     name,

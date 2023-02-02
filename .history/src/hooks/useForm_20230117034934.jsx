@@ -3,6 +3,10 @@ import { useState } from "react";
 const useForm = (initial = {}) => {
   const [inputs, setInputs] = useState(initial);
 
+  const resetForm = () => {
+    setInputs(initial);
+  };
+
   const updateForm = (e) => {
     let { value, name, type } = e.target;
     if (type === "number") {
@@ -16,10 +20,6 @@ const useForm = (initial = {}) => {
       ...inputs,
       [name]: value,
     });
-  };
-
-  const resetForm = () => {
-    setInputs(initial);
   };
 
   const clearForm = () => {

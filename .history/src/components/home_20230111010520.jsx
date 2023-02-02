@@ -26,9 +26,8 @@ const Home = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error</p>
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>No repos Found</p>;
 
   const {
     name,
