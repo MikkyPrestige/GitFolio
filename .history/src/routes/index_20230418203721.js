@@ -12,19 +12,19 @@ const UserRepo = lazy(() => import("../components/searchRepo"));
 
 const AppRouter = () => {
   return (
-    <ContextProvider>
+      <ContextProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/repos">
-          <Route index element={<Repos />} />
-          <Route path=":repo" element={<MoreInfo />} />
-        </Route>
-        <Route path="/test" element={<ErrorBoundaryTest />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/searchRepo" element={<UserRepo />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </ContextProvider>
+          <Route path="/" element={<Home />} />
+          <Route path="/repos">
+            <Route index element={<Repos />} />
+            <Route path=":repo" element={<MoreInfo />} />
+          </Route>
+          <Route path="/test" element={<ErrorBoundaryTest />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/searchRepo" element={<UserRepo />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </ContextProvider>
   );
 };
 

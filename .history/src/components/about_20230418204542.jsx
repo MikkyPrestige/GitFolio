@@ -48,24 +48,32 @@ const About = () => {
           <h3 className="desc--heading">App Description:</h3>
           <p>
             This is a React app that uses the Github API to search for a user's
-            repositories and display them in the app. My GitHub profile is used
-            as the default data fetched. Click on the
-            <strong>
-              {" "}
-              Click here to search for more GitHub repositories{" "}
-            </strong>{" "}
-            button at the top of the <strong>HomePage</strong> to search for any
-            user's GitHub repositories.
+            repositories and display them in the app.
+            My GitHub profile is used as the default data. Click on the
+            <strong> Search </strong> button to search for a user's repositories.
           </p>
           <p>
-            Navigate to <strong>Test Error</strong> page to test the error
-            boundary component.
+            Data is passed between components with React useContext and React
+            Router DOM is used for Routing in the app and React Helmet for SEO.
+          </p>
+          <p>
+            React ErrorBoundary is used to catch errors in the app and display a
+            fallback UI when an error is caught in the app and React lazy and
+            Suspense is used to lazy load the components in the app.
+          </p>
+          <p>
+            A Test page is also added to the app to test the app's error
+            boundary.
+          </p>
+          <p>
+            404 Error page is also added to the app to display when a wrong url
+            is entered in the app and the app is deployed to Vercel.
           </p>
         </div>
         <Back />
       </div>
       <footer className="footer">
-        <p className="attribution">&copy;Michael Elue 2022</p>
+        <p className="attribution">&copy;meekyberry2022</p>
       </footer>
     </section>
   );

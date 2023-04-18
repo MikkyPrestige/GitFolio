@@ -29,7 +29,7 @@ const UserRepo = () => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error(`No Repository Found for ${inputs.github}.`);
+        throw new Error("No repo Found.");
       })
       .then((data) => {
         setUser(data);
@@ -38,6 +38,7 @@ const UserRepo = () => {
           `Showing ${data.length} ${
             data.length > 1 ? "repositories" : "repository"
           } for ${inputs.github} `
+
         );
       })
       .catch((error) => {
@@ -96,9 +97,7 @@ const UserRepo = () => {
             <div className="searchRepo--results">
               <ul className="searchRepo--lists">
                 <h2 className="searchRepo--lists__heading">
-                  {user.length > 0 && (
-                    <span>{user.length} Repositories found</span>
-                  )}
+                  <span>{user.length}</span> Repositories found
                 </h2>
                 {currentUsers.map((user, index) => {
                   const { name, html_url, description, language, topics } =

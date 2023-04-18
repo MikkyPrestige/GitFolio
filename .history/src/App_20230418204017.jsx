@@ -1,7 +1,10 @@
 import { React, Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import AppRouter from "./routes";
-import { Layout, FallbackError } from "./components";
+import {
+  Layout,
+  FallbackError,
+} from "./components";
 
 const App = () => {
   return (

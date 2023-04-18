@@ -96,9 +96,11 @@ const UserRepo = () => {
             <div className="searchRepo--results">
               <ul className="searchRepo--lists">
                 <h2 className="searchRepo--lists__heading">
-                  {user.length > 0 && (
-                    <span>{user.length} Repositories found</span>
-                  )}
+                  {user.length > 0 ?
+                    `Showing ${currentUsers.length} ${
+                      currentUsers.length > 1 ? "repositories" : "repository"
+                    } for ${inputs.github} `
+                    : ""}
                 </h2>
                 {currentUsers.map((user, index) => {
                   const { name, html_url, description, language, topics } =

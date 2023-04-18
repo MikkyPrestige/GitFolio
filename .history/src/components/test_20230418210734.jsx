@@ -7,9 +7,7 @@ import { Back } from "../components";
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div role="alert" style={{ textAlign: "center", marginTop: "5rem" }}>
-      <p
-        style={{ fontSize: "2rem", fontWeight: "700", fontFamily: "Fira Sans" }}
-      >
+      <p style={{ fontSize: "2rem", fontWeight: "700", fontFamily: "Fira Sans" }}>
         You failed the test!!!
       </p>
       <pre
@@ -18,7 +16,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
           fontSize: "2.2rem",
           fontWeight: "700",
           color: "red",
-          fontFamily: "Fira Sans",
+          fontFamily: "Fira Sans" 
         }}
       >
         {error.message}
@@ -33,7 +31,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
           borderRadius: ".5rem",
           border: "none",
           backgroundColor: "#bbe0ff",
-          fontFamily: "Fira Sans",
+          fontFamily: "Fira Sans"
         }}
       >
         Try again
@@ -48,9 +46,7 @@ const Bomb = ({ username }) => {
   }
   return (
     <div style={{ textAlign: "center", marginTop: "5rem" }}>
-      <p
-        style={{ color: "#bbe0ff", fontSize: "2rem", fontFamily: "Fira Sans" }}
-      >
+      <p style={{ color: "#bbe0ff", fontSize: "2rem", fontFamily: "Fira Sans" }}>
         Hello {username}, you passed the test!!!
       </p>
     </div>
@@ -63,23 +59,10 @@ const ErrorBoundaryTest = () => {
 
   return (
     <div style={{ margin: "3rem" }}>
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "2rem",
-          color: "#ffea11",
-          fontFamily: "Roboto",
-        }}
-      >
+      <h1 style={{ textAlign: "center", fontSize: "2rem", color: "#ffea11" }}>
         ErrorBoundary Test Page
       </h1>
-      <label
-        style={{
-          fontSize: "1.3rem",
-          fontWeight: "700",
-          fontFamily: "Fira Sans",
-        }}
-      >
+      <label style={{ fontSize: "1.3rem", fontWeight: "700" }}>
         {`Type your Username (Don't type "ABIOLA"): `} {""}
         <input
           ref={usernameRef}

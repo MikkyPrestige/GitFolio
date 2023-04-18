@@ -1,9 +1,9 @@
 .searchRepo--container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 5rem 0 2rem 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .searchRepo--loading {
-  margin: 10rem auto;
+  /* margin: 10rem auto; */
   text-align: center;
   font-size: 2rem;
   color: #19F3A9;

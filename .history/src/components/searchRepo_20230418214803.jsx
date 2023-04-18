@@ -96,6 +96,9 @@ const UserRepo = () => {
             <div className="searchRepo--results">
               <ul className="searchRepo--lists">
                 <h2 className="searchRepo--lists__heading">
+                  {/* <span>{user.length}</span> Repositories found */}
+                  {/* {error && <span>{error}</span>} */}
+                  {/* conditionally render */}
                   {user.length > 0 && (
                     <span>{user.length} Repositories found</span>
                   )}

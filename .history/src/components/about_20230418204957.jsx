@@ -48,24 +48,21 @@ const About = () => {
           <h3 className="desc--heading">App Description:</h3>
           <p>
             This is a React app that uses the Github API to search for a user's
-            repositories and display them in the app. My GitHub profile is used
-            as the default data fetched. Click on the
-            <strong>
-              {" "}
-              Click here to search for more GitHub repositories{" "}
-            </strong>{" "}
-            button at the top of the <strong>HomePage</strong> to search for any
-            user's GitHub repositories.
+            repositories and display them in the app.
+            My GitHub profile is used as the default data fetched. Click on the
+            <strong> Click here to search for more GitHub repositories </strong> button at the top of the <strong>HomePage</strong> to search for any user's GitHub repositories.
           </p>
           <p>
-            Navigate to <strong>Test Error</strong> page to test the error
-            boundary component.
+            The app is hosted on Netlify and the source code is on GitHub.
+          </p>
+          <p>
+
           </p>
         </div>
         <Back />
       </div>
       <footer className="footer">
-        <p className="attribution">&copy;Michael Elue 2022</p>
+        <p className="attribution">&copy;meekyberry2022</p>
       </footer>
     </section>
   );

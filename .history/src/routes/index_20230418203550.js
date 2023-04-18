@@ -8,23 +8,23 @@ const MoreInfo = lazy(() => import("../components/moreInfo"));
 const Error = lazy(() => import("../components/404"));
 const ErrorBoundaryTest = lazy(() => import("../components/test"));
 const ContextProvider = lazy(() => import("../components/context"));
-const UserRepo = lazy(() => import("../components/searchRepo"));
+const UserRepo = lazy(() => import("../components/userRepo"));
 
 const AppRouter = () => {
   return (
-    <ContextProvider>
+      <ContextProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/repos">
-          <Route index element={<Repos />} />
-          <Route path=":repo" element={<MoreInfo />} />
-        </Route>
-        <Route path="/test" element={<ErrorBoundaryTest />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/searchRepo" element={<UserRepo />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </ContextProvider>
+          <Route path="/" element={<Home />} />
+          <Route path="/repos">
+            <Route index element={<Repos />} />
+            <Route path=":repo" element={<MoreInfo />} />
+          </Route>
+          <Route path="/test" element={<ErrorBoundaryTest />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/searchRepo" element={<UserRepo />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </ContextProvider>
   );
 };
 
