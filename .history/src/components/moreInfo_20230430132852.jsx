@@ -10,26 +10,8 @@ const MoreInfo = () => {
   const { repository } = useContext(Context);
   const { repo } = useParams();
   const repoData = repository.find((item) => item.name === repo);
-  const {
-    name,
-    description,
-    html_url,
-    homepage,
-    language,
-    created_at,
-    updated_at,
-    pushed_at,
-    topics,
-    forks_count,
-    stargazers_count,
-    watchers_count,
-    size,
-    open_issues,
-    has_discussions,
-    visibility,
-    login,
-    default_branch,
-  } = repoData || {};
+  const { name, description, html_url, homepage, language, created_at, updated_at, pushed_at, topics,
+        forks_count, stargazers_count, watchers_count, size, open_issues, has_discussions, visibility, login,default_branch } = repoData || {};
   const dateCreated = new Date(created_at);
   const dateUpdated = new Date(updated_at);
   const datePushed = new Date(pushed_at);

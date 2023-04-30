@@ -16,11 +16,16 @@ const useForm = (initial = "") => {
     setInputs(initial);
   };
 
+  const clearForm = () => {
+    setInputs("")
+  }
+  
   // Return the things we want to surface from this custom hook
   return {
     inputs,
     resetForm,
     updateForm,
+    clearForm,
   };
 };
 

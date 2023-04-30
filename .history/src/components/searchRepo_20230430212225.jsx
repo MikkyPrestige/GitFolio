@@ -31,7 +31,7 @@ const UserRepo = () => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error(`No Repository Found for ${inputs.github}`);
+        throw new Error(`No Repository Found for ${inputs.github}.`);
       })
       .then((data) => {
         setUser(data);
@@ -95,6 +95,11 @@ const UserRepo = () => {
           {loading && (
             <div className="searchRepo--loading">
               <p>Loading...</p>
+            </div>
+          )}
+          {error && (
+            <div className="searchRepo--error">
+              <p>{error}</p>
             </div>
           )}
           <ul className="searchRepo--lists">

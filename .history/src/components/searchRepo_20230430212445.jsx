@@ -31,7 +31,7 @@ const UserRepo = () => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error(`No Repository Found for ${inputs.github}`);
+        throw new Error(`No Repository Found for ${inputs.github}.`);
       })
       .then((data) => {
         setUser(data);

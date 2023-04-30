@@ -21,6 +21,7 @@ const UserRepo = () => {
     if (!inputs.github) {
       setError("Enter a GitHub username");
       setUser([]);
+      resetForm();
       return;
     }
     setLoading(true);
@@ -31,11 +32,12 @@ const UserRepo = () => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error(`No Repository Found for ${inputs.github}`);
+        throw new Error(`No Repository Found for ${inputs.github}.`);
       })
       .then((data) => {
         setUser(data);
         setLoading(false);
+        resetForm();
         setError(
           `Showing ${data.length} ${
             data.length > 1 ? "repositories" : "repository"
@@ -46,6 +48,7 @@ const UserRepo = () => {
         setError(error.message);
         setLoading(false);
         setUser([]);
+        resetForm();
       });
     resetForm();
   };

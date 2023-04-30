@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useForm = (initial = "") => {
+const useForm = (initial = {}) => {
   const [inputs, setInputs] = useState(initial);
 
   const updateForm = (e) => {
@@ -16,11 +16,19 @@ const useForm = (initial = "") => {
     setInputs(initial);
   };
 
+  const clearForm = () => {
+    const blankState = Object.fromEntries(
+      Object.entries(inputs).map(([key, value]) => [key, ""])
+    );
+    setInputs(blankState);
+  };
+
   // Return the things we want to surface from this custom hook
   return {
     inputs,
     resetForm,
     updateForm,
+    clearForm,
   };
 };
 
