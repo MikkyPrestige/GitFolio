@@ -1,12 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+
 .layout {
   background-color: #fffff2;
-  padding: .3rem 3rem;
+  padding: 0.3rem 0;
 }
 
 .layout--header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.layout--header--logo {
+  font-family: "Tilt Prism", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  color: #000;
+  flex-basis: 20%;
+  margin-left: 0.5rem;
+  text-decoration: none;
 }
 
 .layout--items {
@@ -15,26 +29,26 @@
 
 .layout--btn {
   position: fixed;
-  top: 1rem;
-  right: 2rem;
+  top: 0.5rem;
+  right: 1rem;
   z-index: 10;
   background-color: #fffff2;
   border: none;
   font-size: 2rem;
-  font-weight: 700;
   cursor: pointer;
 }
 
 .menuNav {
   position: fixed;
-  top: 5rem;
+  top: 3rem;
   right: 0;
   width: 0;
-  max-width: 15rem;
+  max-width: 10rem;
   height: 100%;
   background-color: #fffff2;
   z-index: 5;
   overflow: hidden;
+  transition: all 1s ease-in;
 }
 
 .menuNav.showMenu {
@@ -50,9 +64,9 @@
   display: block;
   margin-top: 1rem;
   text-align: center;
-  text-transform: uppercase;
   font-size: 1.2rem;
-  font-family: 'Blinker';
+  font-family: "Tilt Prism", cursive;
+  font-weight: 600;
   color: #0046dc;
 }
 
@@ -66,11 +80,10 @@
 }
 
 .layout--item__two {
-  text-transform: uppercase;
   font-size: 1.1rem;
-  font-family: 'Blinker';
+  font-family: "Tilt Prism", cursive;
   font-weight: 700;
-  letter-spacing: .2rem;
+  letter-spacing: 0.1rem;
   color: #0046dc;
 }
 

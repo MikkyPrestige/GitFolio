@@ -1,6 +1,7 @@
 // CONTEXT COMPONENT - This is the context component for the app. It provides the data to the app components. It uses the Github API to fetch the data.
 
 import React, { useState, useEffect, createContext } from "react";
+import Load from "../assets/img/Interwind.gif";
 
 export const Context = createContext();
 
@@ -25,6 +26,26 @@ const ContextProvider = (props) => {
         setLoading(false);
       });
   }, [page]);
+
+  if (loading) {
+    <di className="home--loading">
+      <img
+        src={Load}
+        alt="Loading..."
+        style={{
+          width: "5rem",
+          height: "5rem",
+        }}
+      />
+    </di>
+  }
+
+  if (error) {
+    <p className="home--error">
+      Network Error{" "}
+      <span className="home--error__span"> please refresh the page.</span>
+    </p>;
+  }
 
   return (
     <Context.Provider value={{ repository, page, setPage }}>

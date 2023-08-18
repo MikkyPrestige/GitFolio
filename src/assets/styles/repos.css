@@ -3,17 +3,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Blinker';
+  font-family: "Blinker";
   font-size: 1.2rem;
   min-height: 100vh;
-  padding: 1rem 0;
   background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
 }
 
 .repos--heading {
   font-size: 2.2rem;
-  font-family: 'Roboto';
-  color: #FFEA11;
+  font-family: "Tilt Prism", cursive;
+  color: #ffea11;
   border-bottom: 1px solid #fffff2;
   text-transform: uppercase;
   text-align: center;
@@ -23,17 +23,17 @@
 }
 
 .repos--heading::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: #fffff2;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .repos--list {
   border-bottom: 1px solid #fffff2;
-  height: 7rem;
+  height: 5rem;
   width: 90%;
   list-style: none;
   font-family: "Fira Sans";
@@ -48,11 +48,12 @@
   text-decoration: none;
   color: #f8f8ff;
   font-size: 1rem;
+  font-family: "Tilt Prism", cursive;
   background-color: #0046dc;
-  padding: .3rem .5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 10px;
   border: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .repos--btn:hover {
@@ -71,6 +72,7 @@
 .pagination--btn {
   padding: 0 1rem;
   font-size: 1.2rem;
+  font-family: "Tilt Prism", cursive;
 }
 
 @media screen and (max-width: 600px) {
@@ -79,11 +81,11 @@
   }
 
   .repos--list__item {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .repos--btn {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .pagination--btn {

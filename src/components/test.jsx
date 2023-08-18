@@ -1,6 +1,7 @@
 // ERRORBOUNDARY TEST COMPONENT - This is a page to test errorboundary.
 
 import React, { useRef, useState } from "react";
+// eslint-disable-next-line
 import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
 import { Back } from "../components";
 
@@ -68,7 +69,7 @@ const ErrorBoundaryTest = () => {
           textAlign: "center",
           fontSize: "2rem",
           color: "#ffea11",
-          fontFamily: "Roboto",
+          fontFamily: "Tilt Prism"
         }}
       >
         ErrorBoundary Test Page

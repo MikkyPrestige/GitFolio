@@ -1,10 +1,9 @@
-// HOME COMPONENT - This is the home page component for the app. It displays the app info message and a button to navigate to the repositories page.
-// Display Name, followers and following count, location, current local time and bio from my github portfolio
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "../assets/styles/home.css";
 import { useState, useEffect } from "react";
+import Load from "../assets/img/Interwind.gif";
 
 const Home = () => {
   const [display, setDisplay] = useState([]);
@@ -39,7 +38,16 @@ const Home = () => {
   return (
     <div className="home">
       {loading ? (
-        <p className="home--loading">Loading...</p>
+        <div className="home--loading">
+          <img
+          src={Load}
+          alt="Loading..."
+          style={{
+            width: "5rem",
+            height: "5rem",
+          }}
+        />
+        </div>
       ) : error ? (
         <p className="home--error">
           Network Error{" "}
@@ -51,30 +59,16 @@ const Home = () => {
             <title>Home Page</title>
             <meta name="description" content="Home" />
           </Helmet>
-          <div className="home--container__time">
-            <span className="home--container__time--span">
-              <strong>Date: </strong>
-              <span>{new Date().toLocaleDateString()}</span>
-            </span>
-            <span className="home--container__time--span">
-              <strong>Time: </strong>
-              <span>{new Date().toLocaleTimeString()}</span>
-            </span>
-          </div>
           <div className="home--container__top">
-            <Link to="searchRepo" className="home--container__topLink">
-              Click here to search for more Github repositories
+            <Link to="search" className="home--container__topLink">
+              Click me to search for other users repositories <span>👈</span>
             </Link>
           </div>
           <div className="home--container">
-            <h1 className="home--heading">Github repository display app!!!</h1>
-            <div className="home--paragraph">
-              <div className="home--paragraph__text">
-                <p>
-                  This is a simple app that displays my github repositories and
-                  also used to search for other github users repositories.
+                <p className="home--paragraph__text">
+                 Search for your own or any user's repositories using
+                  <strong> GitFolio</strong> and view them in the app. <br/>Test our error boundary component on the Test Error page.
                 </p>
-              </div>
               <div className="home--wrapper">
                 <h1 className="home--info__heading">{name} github profile</h1>
                 <div className="home--info">
@@ -86,6 +80,7 @@ const Home = () => {
                         borderRadius: "1rem",
                         width: "100%",
                         height: "100%",
+                        objectFit: "cover"
                       }}
                     />
                   </div>
@@ -117,12 +112,11 @@ const Home = () => {
                     className="home--btn"
                     onClick={() => navigate("/repos")}
                   >
-                    View Repositories
+                    View My Repos
                   </button>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       )}
     </div>

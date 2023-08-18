@@ -3,6 +3,8 @@ import useForm from "../hooks/useForm";
 import Pagination from "./pagination";
 import "../assets/styles/searchRepo.css";
 import { Back } from "../components";
+import Magnify from "../assets/img/Magnify.gif";
+import { Helmet } from "react-helmet";
 
 const UserRepo = () => {
   const [user, setUser] = useState([]);
@@ -71,9 +73,16 @@ const UserRepo = () => {
 
   return (
     <div className="searchRepo--container">
+      <Helmet>
+        <title>Search Github Repositories</title>
+        <meta
+          name="description"
+          content="Search Github repositories by username"
+        />
+      </Helmet>
       <div className="searchRepo">
         <h1 className="searchRepo--heading">
-          Explore more Github repositories
+          Explore Github repositories
         </h1>
         <form className="searchRepo--form" onSubmit={handleSubmit}>
           <div className="searchRepo--form__container">
@@ -94,7 +103,10 @@ const UserRepo = () => {
         <div className="searchRepo--results">
           {loading && (
             <div className="searchRepo--loading">
-              <p>Loading...</p>
+              <img src={Magnify} alt="Loading..." style={{
+                width: "5rem",
+                height: "5rem",
+              }}/>
             </div>
           )}
           <ul className="searchRepo--lists">
@@ -110,24 +122,24 @@ const UserRepo = () => {
               return (
                 <li key={index} className="searchRepo--list">
                   <h3 className="searchRepo--list__title">
-                    <strong>Repository Name </strong>
+                    <strong className="strong">Repository Name </strong>
                     {name}
                   </h3>
                   {description && (
                     <p className="searchRepo--list__content">
-                      <strong>Repository Description </strong>
+                      <strong className="strong">Repository Description </strong>
                       {description}
                     </p>
                   )}
                   {language && (
                     <p className="searchRepo--list__content">
-                      <strong>Repository Language </strong>
+                      <strong className="strong">Repository Language </strong>
                       {language}
                     </p>
                   )}
                   {topicsComma && (
                     <p className="searchRepo--list__content">
-                      <strong>Repository Topics </strong>
+                      <strong className="strong">Repository Topics </strong>
                       {topicsComma}
                     </p>
                   )}

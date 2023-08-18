@@ -10,11 +10,13 @@ const Back = () => {
         onClick={() => navigate("/")}
         style={{
           fontSize: "1rem",
+          fontFamily: "Tilt Prism",
+          fontWeight: "700",
           color: "#00bb14",
           textDecoration: "none",
           border: "none",
           borderRadius: "1rem",
-          padding: ".5rem",
+          padding: ".2rem .5rem",
           cursor: "pointer",
         }}
       >

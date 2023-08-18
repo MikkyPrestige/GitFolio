@@ -27,18 +27,18 @@
 }
 
 .error--link {
-  padding: .5rem 1rem;
+  padding: 0.3rem 0.5rem;
   font-size: 1rem;
-  font-weight: 700;
+  font-family: "Tilt Prism", cursive;
   color: #fff;
   background-color: #0046dc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .error--link:hover {

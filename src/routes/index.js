@@ -2,7 +2,6 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 const Home = lazy(() => import("../components/home"));
-const About = lazy(() => import("../components/about"));
 const Repos = lazy(() => import("../components/repos"));
 const MoreInfo = lazy(() => import("../components/moreInfo"));
 const Error = lazy(() => import("../components/404"));
@@ -20,8 +19,7 @@ const AppRouter = () => {
           <Route path=":repo" element={<MoreInfo />} />
         </Route>
         <Route path="/test" element={<ErrorBoundaryTest />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/searchRepo" element={<UserRepo />} />
+        <Route path="/search" element={<UserRepo />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </ContextProvider>

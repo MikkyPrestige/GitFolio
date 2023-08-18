@@ -12,7 +12,7 @@
   max-width: 800px;
   padding: 1rem 2rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -22,21 +22,21 @@
   text-transform: capitalize;
   font-size: 2.2rem;
   font-weight: 700;
-  font-family: "Fira Sans";
-  color: #19F3A9;
+  font-family: "Tilt Prism", cursive;
+  color: #19f3a9;
 }
 
 .searchRepo--loading {
-  margin: 10rem auto;
-  text-align: center;
-  font-size: 2rem;
-  color: #19F3A9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .searchRepo--error {
   font-size: 1rem;
-  color: #F31919;
-  margin-top: .1rem;
+  color: #f31919;
+  margin-top: 0.1rem;
 }
 
 .searchRepo--form {
@@ -57,13 +57,13 @@
 
 .searchRepo--form__input {
   width: 30%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .searchRepo--form__input::placeholder {
@@ -76,19 +76,19 @@
 }
 
 .searchRepo--form__btn {
-  padding: .3rem 1rem;
+  padding: 0.2rem 0.8rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #000;
   color: #fff;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-family: "Tilt Prism", cursive;
   margin: 1rem 0;
   cursor: pointer;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .searchRepo--form__btn:hover {
@@ -106,10 +106,8 @@
 .searchRepo--lists__heading {
   font-size: 1.8rem;
   text-align: center;
-}
-
-.searchRepo--lists__heading span {
-  color: #FFEA11;
+  font-family: "Tilt Prism", cursive;
+  color: #ffea11;
 }
 
 .searchRepo--list {
@@ -119,8 +117,8 @@
   align-items: center;
   gap: 0rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -133,9 +131,13 @@
   align-items: center;
 }
 
+.strong {
+  color: #ffea11;
+}
+
 .searchRepo--list__content {
   font-size: 1.1rem;
-  margin-top: .1rem;
+  margin-top: 0.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,9 +148,9 @@
 .searchRepo--link {
   font-size: 1.2rem;
   text-decoration: none;
-  margin-top: .1rem;
-  font-family: "Fira Sans";
-  color: #19F3A9;
+  margin-top: 0.1rem;
+  font-family: "Tilt Prism", cursive;
+  color: #19f3a9;
 }
 
 .searchRepo--link:hover {
@@ -169,24 +171,25 @@
 }
 
 .pagination--list {
-  margin: 0 1rem
+  margin: 0 1rem;
 }
 
 .pagination--list__nums {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 .page--btn {
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #000;
+  font-family: "Tilt Prism", cursive;
   color: #fff;
   cursor: pointer;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .page--btn:hover {
@@ -195,16 +198,18 @@
 }
 
 .pagination--num {
-  padding: .3rem 1rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid #ccc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #fff;
+  font-family: "Tilt Prism", cursive;
   color: #000;
+  font-weight: 700;
   cursor: pointer;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -220,7 +225,7 @@
   }
 
   .searchRepo {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .searchRepo--heading {
@@ -228,7 +233,7 @@
   }
 
   .searchRepo--form__input {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .searchRepo--lists__heading {
@@ -248,29 +253,29 @@
   }
 
   .pagination--list {
-    margin: 0 .5rem
+    margin: 0 0.5rem;
   }
 
   .pagination--list__nums {
-    margin: 0 .3rem;
+    margin: 0 0.3rem;
   }
 
   .page--btn {
-    padding: .3rem .7rem;
+    padding: 0.3rem 0.7rem;
   }
 
   .pagination--num {
-    padding: .3rem .8rem;
+    padding: 0.3rem 0.8rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .searchRepo--container {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .searchRepo {
-    padding: .5rem;
+    padding: 0.5rem;
     border: none;
   }
 
@@ -287,7 +292,7 @@
   }
 
   .searchRepo--list__content {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .searchRepo--link {
@@ -299,19 +304,18 @@
   }
 
   .pagination--list {
-    margin: 0 .3rem
+    margin: 0 0.3rem;
   }
 
   .pagination--list__nums {
-    margin: 0 .2rem;
+    margin: 0 0.2rem;
   }
 
   .pagination--num {
-    padding: .2rem .5rem;
+    padding: 0.2rem 0.5rem;
   }
 
   .page--btn {
-    padding: .2rem .7rem;
+    padding: 0.2rem 0.7rem;
   }
-
 }

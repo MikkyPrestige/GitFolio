@@ -1,9 +1,6 @@
-// LAYOUT COMPONENT - This component is the layout for the Navigation bar. It contains the header logo and the Navigation for the app.
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../assets/styles/layout.css";
-import Logo from "../assets/img/rest-api-logo.webp";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
@@ -19,9 +16,8 @@ const Layout = () => {
 
 const CustomNavLink = ({ to, ...props }) => {
   let activeStyle = {
-    color: "red",
-    fontWeight: "bold",
-    textDecoration: "underline",
+    color: "#00bb14",
+    fontWeight: "bold"
   };
 
   return (
@@ -49,15 +45,7 @@ const LayoutSmall = () => {
   return (
     <div className="layout layoutOne">
       <header className="layout--header">
-        <div className="layout--header--logo">
-          <Link to="/">
-            <img
-              src={Logo}
-              alt="logo"
-              style={{ width: "8rem", height: "4rem" }}
-            />
-          </Link>
-        </div>
+          <Link to="/" className="layout--header--logo">Gitfolio</Link>
         <nav className="layout--items">
           <button onClick={toggleNav} className="layout--btn">
             {nav ? (
@@ -76,11 +64,11 @@ const LayoutSmall = () => {
               Home
             </CustomNavLink>
             <CustomNavLink
-              to="repos"
+              to="SearchRepo"
               className="layout--item"
               onClick={() => closeNav()}
             >
-              Repositories
+              Search Repos
             </CustomNavLink>
             <CustomNavLink
               to="test"
@@ -88,20 +76,6 @@ const LayoutSmall = () => {
               onClick={() => closeNav()}
             >
               Test Error
-            </CustomNavLink>
-            <CustomNavLink
-              to="about"
-              className="layout--item"
-              onClick={() => closeNav()}
-            >
-              About
-            </CustomNavLink>
-            <CustomNavLink
-              to="SearchRepo"
-              className="layout--item"
-              onClick={() => closeNav()}
-            >
-              Search Repositories
             </CustomNavLink>
           </div>
         </nav>
@@ -114,27 +88,16 @@ const LayoutLarge = () => {
   return (
     <div className="layout layoutTwo">
       <header className="layout--header">
-        <div className="layout--header--logo">
-          <Link to="/">
-            <img
-              src={Logo}
-              alt="logo"
-              style={{ width: "8rem", height: "4rem" }}
-            />
-          </Link>
-        </div>
+          <Link to="/" className="layout--header--logo">Gitfolio</Link>
         <nav className="layout--items--container">
           <CustomNavLink to="/" end className="layout--item__two">
             Home
           </CustomNavLink>
-          <CustomNavLink to="repos" className="layout--item__two">
-            Repositories
+            <CustomNavLink to="search" className="layout--item__two">
+            Search Repos
           </CustomNavLink>
           <CustomNavLink to="test" className="layout--item__two">
             Test Error
-          </CustomNavLink>
-          <CustomNavLink to="about" className="layout--item__two">
-            About
           </CustomNavLink>
         </nav>
       </header>
