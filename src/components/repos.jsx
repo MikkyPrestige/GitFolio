@@ -13,26 +13,25 @@ const Repos = () => {
   return (
     <div className="repos">
       <Helmet>
-        <title>Repositories</title>
-        <meta name="description" content="Repositories" />
+        <title>GitFolio | Repositories</title>
+        <meta name="description" content="My Github Repositories" />
       </Helmet>
       <div className="repos__container">
-        <h1 className="repos--heading">Repository Lists</h1>
-        <div>
-          <ul>
+        <h1 className="repos--heading">My Github Repositories</h1>
+          <ul className="repos--lists">
             {repository.map((repo) => {
               return (
                 <li key={repo.id} className="repos--list">
                   <h2 className="repos--list__item">{repo.name}</h2>
                   <NavLink to={`/repos/${repo.name}`} className="repos--btn">
-                    View Repository Data
+                    View data <span className="repos--btn__span">{">"}</span>
                   </NavLink>
                 </li>
               );
             })}
           </ul>
-        </div>
         <div className="pagination">
+          <span className="pagination--btn">
           <button
             className="repos--btn"
             onClick={() => setPage(page - 1)}
@@ -40,9 +39,11 @@ const Repos = () => {
           >
             Prev
           </button>
+          </span>
           <p className="pagination--btn">
             Page: {page} of {repository.length}
           </p>
+          <span className="pagination--btn">
           <button
             className="repos--btn"
             onClick={() => setPage(page + 1)}
@@ -50,6 +51,7 @@ const Repos = () => {
           >
             Next
           </button>
+          </span>
         </div>
         <Back />
       </div>

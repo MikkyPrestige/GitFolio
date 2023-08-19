@@ -91,7 +91,6 @@
 .home--info__heading {
   color: #bbe0ff;
   font-size: 1.3rem;
-  font-family: "Tilt Prism", cursive;
 }
 
 .home--info {
@@ -145,7 +144,7 @@ strong {
 
 .home--btn {
   background-color: #0046dc;
-  color: #ffea11;
+  color: #fffff2;
   border: none;
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
@@ -242,10 +241,6 @@ strong {
     font-size: 0.9rem;
   }
 
-  .home--container__top {
-    flex-basis: 50%;
-  }
-
   .home--container__bottom {
     width: 50%;
   }
@@ -266,12 +261,12 @@ strong {
   }
 
   .home--container__top {
-    width: 90%;
+    width: 80%;
     line-height: 1;
   }
 
   .home--container__topLink {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .home--info {

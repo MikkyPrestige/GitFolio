@@ -56,12 +56,12 @@ const Home = () => {
       ) : (
         <div className="home--content">
           <Helmet>
-            <title>Home Page</title>
-            <meta name="description" content="Home" />
+            <title>GitFolio | Home</title>
+            <meta name="description" content="Home page of the GitFolio app" />
           </Helmet>
           <div className="home--container__top">
             <Link to="search" className="home--container__topLink">
-              Click me to search for other users repositories <span>👈</span>
+              Click me to search for other users repositories
             </Link>
           </div>
           <div className="home--container">
@@ -70,7 +70,7 @@ const Home = () => {
                   <strong> GitFolio</strong> and view them in the app. <br/>Test our error boundary component on the Test Error page.
                 </p>
               <div className="home--wrapper">
-                <h1 className="home--info__heading">{name} github profile</h1>
+                <h1 className="home--info__heading">{name}'s Profile</h1>
                 <div className="home--info">
                   <div className="home--img">
                     <img

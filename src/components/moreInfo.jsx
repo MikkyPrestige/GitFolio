@@ -1,4 +1,4 @@
-// MOREINFO COMPONENT - This component displays more data on each repositories when 'View repo data' link is clicked in the repo component.
+// MoreInfo COMPONENT - This component displays more data on each repositories when 'View repo data' link is clicked in the repo component.
 
 import { Link, useParams } from "react-router-dom";
 import React, { useContext } from "react";
@@ -42,8 +42,10 @@ const MoreInfo = () => {
   return (
     <div className="info">
       <Helmet>
-        <title>Repository Data</title>
-        <meta name="description" content="Extra Repository data" />
+        <title>
+         GitFolio | {name}
+        </title>
+        <meta name="description" content="Repository Data" />
       </Helmet>
       <h1 className="info--heading">Repository Data</h1>
       <div className="info--data">

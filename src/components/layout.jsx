@@ -7,10 +7,10 @@ import { FiMenu } from "react-icons/fi";
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <LayoutSmall />
       <LayoutLarge />
-    </div>
+    </>
   );
 };
 
@@ -64,7 +64,7 @@ const LayoutSmall = () => {
               Home
             </CustomNavLink>
             <CustomNavLink
-              to="SearchRepo"
+              to="search"
               className="layout--item"
               onClick={() => closeNav()}
             >

@@ -74,10 +74,10 @@ const UserRepo = () => {
   return (
     <div className="searchRepo--container">
       <Helmet>
-        <title>Search Github Repositories</title>
+        <title>GitFolio | Search Repos</title>
         <meta
           name="description"
-          content="Search Github repositories by username"
+          content="Search for your own or any user's repositories using their GitHub username."
         />
       </Helmet>
       <div className="searchRepo">
@@ -122,24 +122,24 @@ const UserRepo = () => {
               return (
                 <li key={index} className="searchRepo--list">
                   <h3 className="searchRepo--list__title">
-                    <strong className="strong">Repository Name </strong>
+                    <strong className="strong">Name </strong>
                     {name}
                   </h3>
                   {description && (
                     <p className="searchRepo--list__content">
-                      <strong className="strong">Repository Description </strong>
+                      <strong className="strong">Description </strong>
                       {description}
                     </p>
                   )}
                   {language && (
                     <p className="searchRepo--list__content">
-                      <strong className="strong">Repository Language </strong>
+                      <strong className="strong">Language </strong>
                       {language}
                     </p>
                   )}
                   {topicsComma && (
                     <p className="searchRepo--list__content">
-                      <strong className="strong">Repository Topics </strong>
+                      <strong className="strong">Topics </strong>
                       {topicsComma}
                     </p>
                   )}

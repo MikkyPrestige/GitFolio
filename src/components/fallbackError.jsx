@@ -10,6 +10,7 @@ const FallbackError = ({ error }) => {
           textTransform: "uppercase",
           fontWeight: "900",
           fontSize: "25px",
+          minHeight: "100vh"
         }}
       >
         Something went wrong!!!

@@ -2,7 +2,7 @@
 
 .layout {
   background-color: #fffff2;
-  padding: 0.3rem 0;
+  padding: 0.3rem;
 }
 
 .layout--header {
@@ -36,6 +36,7 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .menuNav {
