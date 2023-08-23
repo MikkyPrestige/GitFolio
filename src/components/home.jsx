@@ -77,7 +77,7 @@ const Home = () => {
                       src={avatar_url}
                       alt="My img"
                       style={{
-                        borderRadius: "1rem",
+                        borderRadius: "50%",
                         width: "100%",
                         height: "100%",
                         objectFit: "cover"

@@ -85,6 +85,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -103,7 +104,8 @@
 }
 
 .home--img {
-  height: 10rem;
+  height: 13rem;
+  width: fit-content;
 }
 
 .home--container__bottom {
@@ -189,10 +191,6 @@ strong {
     margin-top: -1rem;
   }
 
-  .home--wrapper {
-    gap: 0.3rem;
-  }
-
   .home--info__heading {
     font-size: 1rem;
   }
@@ -225,8 +223,7 @@ strong {
   }
 
   .home--img {
-    width: 50%;
-    height: 15rem;
+    height: 10rem;
   }
 
   .home--container__data {
