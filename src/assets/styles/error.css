@@ -8,6 +8,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  padding-top: 5rem;
 }
 
 .error--img__container {

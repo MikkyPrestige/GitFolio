@@ -7,8 +7,9 @@ import Magnify from "../assets/img/Magnify.gif";
 import { Helmet } from "react-helmet";
 
 const UserRepo = () => {
-  const [user, setUser] = useState([]);
+  const [repo, setRepo] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [reposPerPage] = useState(5);
@@ -22,7 +23,8 @@ const UserRepo = () => {
     // Check if the Github username is empty
     if (!inputs.github) {
       setError("Enter a GitHub username");
-      setUser([]);
+      setRepo([]);
+      setSuccess("");
       return;
     }
     setLoading(true);
@@ -36,18 +38,20 @@ const UserRepo = () => {
         throw new Error(`No Repository Found for ${inputs.github}`);
       })
       .then((data) => {
-        setUser(data);
+        setRepo(data);
         setLoading(false);
-        setError(
-          `Showing ${data.length} ${
-            data.length > 1 ? "repositories" : "repository"
-          } for ${inputs.github} `
+        setSuccess(
+          `${data.length} ${
+            data.length > 1 ? "Repositories" : "Repository"
+          } found for *${inputs.github}*`
         );
+        setError(null);
       })
       .catch((error) => {
         setError(error.message);
         setLoading(false);
-        setUser([]);
+        setRepo([]);
+        setSuccess("");
       });
     resetForm();
   };
@@ -55,7 +59,7 @@ const UserRepo = () => {
   const indexOfLastUser = currentPage * reposPerPage;
   const indexOfFirstUser = indexOfLastUser - reposPerPage;
   const currentUsers =
-    user.length > 0 ? user.slice(indexOfFirstUser, indexOfLastUser) : [];
+    repo.length > 0 ? repo.slice(indexOfFirstUser, indexOfLastUser) : [];
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -66,7 +70,7 @@ const UserRepo = () => {
   };
 
   const nextPage = () => {
-    if (currentPage < Math.ceil(user.length / reposPerPage)) {
+    if (currentPage < Math.ceil(repo.length / reposPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -77,13 +81,11 @@ const UserRepo = () => {
         <title>GitFolio | Search Repos</title>
         <meta
           name="description"
-          content="Search for your own or any user's repositories using their GitHub username."
+          content="Search for your own or any repo's repositories using their GitHub username."
         />
       </Helmet>
       <div className="searchRepo">
-        <h1 className="searchRepo--heading">
-          Explore Github repositories
-        </h1>
+        <h1 className="searchRepo--heading">Explore Repositories on Github</h1>
         <form className="searchRepo--form" onSubmit={handleSubmit}>
           <div className="searchRepo--form__container">
             <input
@@ -100,22 +102,36 @@ const UserRepo = () => {
             Search
           </button>
         </form>
-        <div className="searchRepo--results">
+        <div className="searchRepo--wrapper">
           {loading && (
             <div className="searchRepo--loading">
-              <img src={Magnify} alt="Loading..." style={{
-                width: "5rem",
-                height: "5rem",
-              }}/>
+              <img
+                src={Magnify}
+                alt="Loading..."
+                style={{
+                  width: "5rem",
+                  height: "5rem",
+                }}
+              />
             </div>
           )}
-          <ul className="searchRepo--lists">
-            <h2 className="searchRepo--lists__heading">
-              {user.length > 0 && <span>{user.length} Repositories found</span>}
+          <div className="searchRepo--results">
+            <h2 className="searchRepo--results__heading">
+              {success && <span>{success}</span>}
             </h2>
-            {currentUsers.map((user, index) => {
+            <p className="searchRepo--results__count">
+              {repo.length > 0 && !loading && (
+                <span>
+                  Showing {currentUsers.length} of the {repo.length}{" "}
+                  {repo.length > 1 ? "Repositories" : "Repository"}
+                </span>
+              )}
+            </p>
+          </div>
+          <ul className="searchRepo--lists">
+            {currentUsers.map((repo, index) => {
               const { name, html_url, description, language, topics } =
-                user || [];
+                repo || [];
               // add commmas to topics
               const topicsComma =
                 topics && topics.length > 0 ? topics.join(", ") : "";
@@ -159,15 +175,15 @@ const UserRepo = () => {
         <div className="pagination">
           <Pagination
             reposPerPage={reposPerPage}
-            totalRepos={user.length}
+            totalRepos={repo.length}
             paginate={paginate}
             prevPage={prevPage}
             nextPage={nextPage}
             currentPage={currentPage}
           />
         </div>
-        <Back />
       </div>
+      <Back />
     </div>
   );
 };

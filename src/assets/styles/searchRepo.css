@@ -2,27 +2,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  padding: 5rem 0 2rem 0;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem 0 1rem;
 }
 
 .searchRepo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
-  max-width: 800px;
-  padding: 1rem 2rem;
-  border: 1px solid #ccc;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .searchRepo--heading {
-  margin-bottom: 2rem;
   text-align: center;
-  text-transform: capitalize;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2rem;
   font-family: "Tilt Prism", cursive;
+  letter-spacing: 0.05rem;
   color: #19f3a9;
 }
 
@@ -44,6 +46,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -56,7 +59,7 @@
 }
 
 .searchRepo--form__input {
-  width: 30%;
+  width: 40%;
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -83,7 +86,6 @@
   color: #fff;
   font-size: 1.2rem;
   font-family: "Tilt Prism", cursive;
-  margin: 1rem 0;
   cursor: pointer;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
@@ -96,18 +98,46 @@
   color: #000;
 }
 
+.searchRepo--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.searchRepo--results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: cursive;
+}
+
+.searchRepo--results__heading {
+  font-size: 1.8rem;
+  color: #ffea11;
+}
+
+.searchRepo--results__count {
+  font-size: 1.5rem;
+  margin-top: -0.5rem;
+}
+
 .searchRepo--lists {
   list-style: none;
   font-family: "Roboto";
   padding: 0;
   margin: 0;
-}
-
-.searchRepo--lists__heading {
-  font-size: 1.8rem;
-  text-align: center;
-  font-family: "Tilt Prism", cursive;
-  color: #ffea11;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .searchRepo--list {
@@ -115,11 +145,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 33.33%;
+  min-width: 300px;
+  max-width: 400px;
+  height: 25rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .searchRepo--list__title {
@@ -157,17 +191,28 @@
   text-decoration: underline;
 }
 
+.pagination {
+  width: 100%;
+  height: 100%;
+}
+
 .pagination--nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .pagination--lists {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .pagination--list {
@@ -212,32 +257,21 @@
   -o-border-radius: 0.5rem;
 }
 
-@media screen and (max-width: 900px) {
-  .searchRepo {
-    width: 100%;
-    max-width: 600px;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .searchRepo--container {
-    padding: 1rem;
-  }
-
-  .searchRepo {
-    padding: 0.5rem 1rem;
-  }
-
   .searchRepo--heading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .searchRepo--form__input {
-    margin-bottom: 0.5rem;
+    width: 60%;
   }
 
-  .searchRepo--lists__heading {
+  .searchRepo--results__heading {
     font-size: 1.5rem;
+  }
+
+  .searchRepo--results__count {
+    font-size: 1.2rem;
   }
 
   .searchRepo--list__title {
@@ -270,21 +304,27 @@
 }
 
 @media screen and (max-width: 600px) {
-  .searchRepo--container {
-    padding: 0.5rem;
-  }
-
-  .searchRepo {
-    padding: 0.5rem;
-    border: none;
-  }
-
   .searchRepo--heading {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
-  .searchRepo--lists__heading {
+  .searchRepo--lists {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .searchRepo--list {
+    width: 70%;
+    height: 100%;
+  }
+
+  .searchRepo--results__heading {
     font-size: 1.2rem;
+  }
+
+  .searchRepo--results__count {
+    font-size: 1rem;
   }
 
   .searchRepo--list__title {
@@ -300,7 +340,7 @@
   }
 
   .searchRepo--form__input {
-    width: 45%;
+    width: 70%;
   }
 
   .pagination--list {

@@ -63,13 +63,13 @@ const ErrorBoundaryTest = () => {
   const usernameRef = useRef(null);
 
   return (
-    <div style={{ margin: "3rem" }}>
+    <div style={{ padding: "3rem 2rem 1rem" }}>
       <h1
         style={{
           textAlign: "center",
           fontSize: "2rem",
           color: "#ffea11",
-          fontFamily: "Tilt Prism"
+          fontFamily: "Tilt Prism",
         }}
       >
         ErrorBoundary Test Page
