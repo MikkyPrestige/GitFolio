@@ -31,6 +31,8 @@ const Home = () => {
     following,
     location,
     bio,
+    blog,
+    login,
     avatar_url,
     public_repos,
   } = display || {};
@@ -40,13 +42,13 @@ const Home = () => {
       {loading ? (
         <div className="home--loading">
           <img
-          src={Load}
-          alt="Loading..."
-          style={{
-            width: "5rem",
-            height: "5rem",
-          }}
-        />
+            src={Load}
+            alt="Loading..."
+            style={{
+              width: "5rem",
+              height: "5rem",
+            }}
+          />
         </div>
       ) : error ? (
         <p className="home--error">
@@ -65,58 +67,67 @@ const Home = () => {
             </Link>
           </div>
           <div className="home--container">
-                <p className="home--paragraph__text">
-                 Search for your own or any user's repositories using
-                  <strong> GitFolio</strong> and view them in the app. <br/>Test our error boundary component on the Test Error page.
-                </p>
-              <div className="home--wrapper">
-                <h1 className="home--info__heading">{name}'s Profile</h1>
-                <div className="home--info">
-                  <div className="home--img">
-                    <img
-                      src={avatar_url}
-                      alt="My img"
-                      style={{
-                        borderRadius: "50%",
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover"
-                      }}
-                    />
-                  </div>
-                  <div className="home--container__bottom">
-                    <p className="home--container__data intro">
-                      <strong className="intro__strong">Intro </strong>
-                      {bio}
-                    </p>
-                    <p className="home--container__data">
-                      <strong>Followers: </strong>
-                      {followers}{" "}
-                    </p>
-                    <p className="home--container__data">
-                      <strong>Following: </strong>
-                      {following}{" "}
-                    </p>
-                    <p className="home--container__data">
-                      <strong>Public Repos: </strong>
-                      {public_repos}{" "}
-                    </p>
-                    <p className="home--container__data">
-                      <strong>Location: </strong>
-                      {location}{" "}
-                    </p>
-                  </div>
+            <p className="home--paragraph__text">
+              Search for your own or any user's repositories using
+              <strong> GitFolio</strong> and view them in the app. <br />
+              Test our error boundary component on the Test Error page.
+            </p>
+            <div className="home--wrapper">
+              <h1 className="home--info__heading">{name}'s Profile</h1>
+              <div className="home--info">
+                <div className="home--img">
+                  <img
+                    src={avatar_url}
+                    alt="My img"
+                    style={{
+                      borderRadius: "50%",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
-                <div className="home--button">
-                  <button
-                    className="home--btn"
-                    onClick={() => navigate("/repos")}
-                  >
-                    View My Repos
-                  </button>
+                <div className="home--container__bottom">
+                  <p className="home--container__data intro">
+                    <strong className="intro__strong">Intro</strong>
+                    {bio}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>Username: </strong>
+                    {login}{" "}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>URL: </strong>
+                    {blog}{" "}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>Followers: </strong>
+                    {followers}{" "}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>Following: </strong>
+                    {following}{" "}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>Public Repos: </strong>
+                    {public_repos}{" "}
+                  </p>
+                  <p className="home--container__data">
+                    <strong>Location: </strong>
+                    {location}{" "}
+                  </p>
                 </div>
               </div>
+              <div className="home--button">
+                <button
+                  className="home--btn"
+                  onClick={() => navigate("/repos")}
+                >
+                  View My Repos
+                </button>
+              </div>
             </div>
+          </div>
         </div>
       )}
     </div>

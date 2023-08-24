@@ -42,9 +42,7 @@ const MoreInfo = () => {
   return (
     <div className="info">
       <Helmet>
-        <title>
-         GitFolio | {name}
-        </title>
+        <title>GitFolio | {name}</title>
         <meta name="description" content="Repository Data" />
       </Helmet>
       <h1 className="info--heading">Repository Data</h1>
