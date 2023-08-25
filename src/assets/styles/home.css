@@ -101,7 +101,7 @@
 
 .home--img {
   height: 20rem;
-  width: fit-content;
+  width: 20rem;
 }
 
 .home--container__bottom {
@@ -211,7 +211,7 @@ strong {
 
   .home--info {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .home--info__heading {
