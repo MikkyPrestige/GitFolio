@@ -14,7 +14,7 @@ const ContextProvider = (props) => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://api.github.com/users/MeekyBerry/repos?page=${page}&per_page=4`
+      `https://api.github.com/users/MikkyPrestige/repos?page=${page}&per_page=4`
     )
       .then((response) => response.json())
       .then((data) => {

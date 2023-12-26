@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.github.com/users/MeekyBerry`)
+    fetch(`https://api.github.com/users/MikkyPrestige`)
       .then((response) => response.json())
       .then((data) => {
         setDisplay(data);
