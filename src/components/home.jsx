@@ -61,16 +61,9 @@ const Home = () => {
             <title>GitFolio | Home</title>
             <meta name="description" content="Home page of the GitFolio app" />
           </Helmet>
-          <div className="home--container__top">
-            <Link to="search" className="home--container__topLink">
-              Click me to search for other users repositories
-            </Link>
-          </div>
           <div className="home--container">
-            <p className="home--paragraph__text">
-              Search for your own or any user's repositories using
-              <strong> GitFolio</strong> and view them in the app. <br />
-              Test our error boundary component on the Test Error page.
+            <p className="home--container__title">
+              Use <strong> GitFolio</strong> to search and view repositories of any user!
             </p>
             <div className="home--wrapper">
               <h1 className="home--info__heading">{name}'s Profile</h1>
